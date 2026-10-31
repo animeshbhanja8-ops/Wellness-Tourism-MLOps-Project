@@ -2,7 +2,7 @@ import pandas as pd
 
 RAW_PATH = "tourism_project/data/tourism.csv"
 
-# Load the raw dataset. on_bad_lines="skip" drops any malformed rows 
+# Load the raw dataset. on_bad_lines="skip" drops any malformed rows
 # instead of failing the whole pipeline; the count skipped is reported below.
 rows_before = sum(1 for _ in open(RAW_PATH, encoding="utf-8", errors="replace")) - 1
 df = pd.read_csv(RAW_PATH, on_bad_lines="skip")
