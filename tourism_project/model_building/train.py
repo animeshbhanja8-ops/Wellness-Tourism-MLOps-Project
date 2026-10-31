@@ -78,7 +78,7 @@ with mlflow.start_run():
     # Predictions
     y_pred_train = best_model.predict(Xtrain)
     y_pred_test = best_model.predict(Xtest)
-    
+
     y_prob_train = best_model.predict_proba(Xtrain)[:, 1]
     y_prob_test = best_model.predict_proba(Xtest)[:, 1]
 
