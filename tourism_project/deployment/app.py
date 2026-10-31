@@ -10,7 +10,7 @@ model = joblib.load(model_path)
 # Streamlit UI
 st.title("Wellness Tourism Package Purchase Prediction")
 st.write("""
-This application predicts whether a customer is likely to purchase the newly introduced 
+This application predicts whether a customer is likely to purchase the newly introduced
 **Wellness Tourism Package** based on their demographic details, preferences, and sales interaction metrics.
 Please enter the customer details below to get a prediction.
 """)
@@ -66,7 +66,7 @@ input_data = pd.DataFrame([{
 if st.button("Predict Purchase Likelihood"):
     prediction = model.predict(input_data)[0]
     prediction_proba = model.predict_proba(input_data)[0][1]
-    
+
     st.subheader("Prediction Result:")
     if prediction == 1:
         st.success(f"**Likely to Purchase** (Probability: {prediction_proba:.2%})")
