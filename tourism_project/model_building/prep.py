@@ -18,7 +18,7 @@ df.drop(columns=['CustomerID'], inplace=True, errors='ignore')
 
 # Identify categorical columns for encoding
 categorical_cols = [
-    'TypeofContact', 'Occupation', 'Gender', 'MaritalStatus', 
+    'TypeofContact', 'Occupation', 'Gender', 'MaritalStatus',
     'Designation', 'ProductPitched'
 ]
 
